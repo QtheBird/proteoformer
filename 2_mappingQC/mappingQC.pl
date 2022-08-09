@@ -502,14 +502,14 @@ print "\tPhase - relative position distribution\n";
 #Cat phase-position tmp files
 my $temp_csv_all_pos = $TMP."/mappingqc_".$treated."/pos_table_all.csv";
 if (-d $temp_csv_all_pos){
-    system("rm -rf ".$temp_csv_all_pos);
+    #system("rm -rf ".$temp_csv_all_pos);
 }
 system("touch ".$temp_csv_all_pos);
 
 foreach my $chr (keys %chr_sizes){
     my $temp_csv_chr_pos = $TMP."/mappingqc_".$treated."/phase_position_".$chr.".csv";
     system("cat ".$temp_csv_chr_pos." >> ".$temp_csv_all_pos);
-    system("rm -rf ".$temp_csv_chr_pos);
+    #system("rm -rf ".$temp_csv_chr_pos);
 }
 
 ## TRIPLET IDENTITY PHASE FILE
